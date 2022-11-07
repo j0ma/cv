@@ -15,15 +15,15 @@ jobs:
       - name: Compile PDF
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: cv-gboeing.tex
+          root_file: cv-jonnesaleva.tex
 
-      - name: Publish PDF
-        uses: appleboy/scp-action@v0.1.1
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-          source: "cv-gboeing.pdf"
-          target: "~/public_html/share"
-          use_insecure_cipher: true
+      #- name: Publish PDF
+        #uses: appleboy/scp-action@v0.1.1
+        #with:
+          #host: ${{ secrets.SSH_HOST }}
+          #username: ${{ secrets.SSH_USERNAME }}
+          #key: ${{ secrets.SSH_KEY }}
+          #passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
+          #source: "cv-jonnesaleva.pdf"
+          #target: "~/public_html/share"
+          #use_insecure_cipher: true
